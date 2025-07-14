@@ -103,7 +103,9 @@ document.addEventListener('DOMContentLoaded', () => {
           let color = getColor(originWarehouseId);
           let iconType = (type || '').trim().toLowerCase() === 'warehouse' ? 'fa-warehouse' : 'fa-truck';
 
-          const popup = `
+          const popup = type.trim().toLowerCase() === 'warehouse'
+        ? `<b>${label}</b>`
+        : `
             <b>${label}</b><br>
             Destination: ${destination || 'N/A'}<br>
             Price: ${rateValue || 'N/A'}<br>
@@ -111,7 +113,7 @@ document.addEventListener('DOMContentLoaded', () => {
             Vehicle: ${vehicleType || 'N/A'}<br>
             Created: ${timestamp}<br>
             Updated: ${timestamp}
-          `;
+        `;
 
           const marker = L.marker([latitude, longitude], {
             icon: createIcon(iconType, color)

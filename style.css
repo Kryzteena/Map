@@ -22,38 +22,32 @@ header.top-navbar {
   max-width: 300px;
 }
 
+.analytics-toggle {
+  position: relative;
+  display: inline-block;
+}
+
 #analytics-box {
+  display: none;
+  position: absolute;
+  bottom: 100%; /* place it above the button */
+  left: 0;
   background: white;
   padding: 16px;
-  margin: 10px 20px;
+  margin-bottom: 10px;
   border-radius: 6px;
   box-shadow: 0 2px 6px rgba(0,0,0,0.2);
   font-size: 14px;
   line-height: 1.5;
   z-index: 1000;
   max-width: 350px;
-
+  white-space: nowrap;
 }
 
-#analytics-box strong {
+.analytics-toggle:hover #analytics-box {
   display: block;
-  margin-bottom: 4px;
-  color: #333;
 }
 
-.analytics-toggle button {
-  padding: 6px 12px;
-  font-size: 14px;
-  border-radius: 4px;
-  background: #0e1320;
-  color: white;
-  border: none;
-  cursor: pointer;
-}
-
-.analytics-toggle button:hover {
-  background: #1a1f2e;
-}
 .header-menu {
   display: flex;
   gap: 20px;

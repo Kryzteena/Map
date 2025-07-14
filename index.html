@@ -25,12 +25,23 @@
   <header class="top-navbar">
     <div>Fortem Cement Logistics Map PH</div>
     <nav class="header-menu">
-      <button onclick="toggleAnalytics()">Analytics</button>
-      <button onclick="toggleFilters()">Filters</button>
-      <button onclick="toggleImport()">Import/Update</button>
-      <button onclick="exportAllData()">Export All Data</button>
-      <button onclick="showHelp()">Help</button>
-    </nav>
+  <div class="analytics-toggle">
+    <button>Analytics</button>
+    <div id="analytics-box">
+      <!-- Analytics content will go here -->
+      <strong>Map Analytics</strong><br>
+      Total Warehouses: 0<br>
+      Total Trucks/Rates: 0<br><br>
+      <strong>Vehicle Types</strong><br>
+      CARGO: 0<br>
+      TRAILER: 0<br>
+    </div>
+  </div>
+  <button onclick="toggleFilters()">Filters</button>
+  <button onclick="toggleImport()">Import/Update</button>
+  <button onclick="exportAllData()">Export All Data</button>
+  <button onclick="showHelp()">Help</button>
+</nav>
   </header>
 
   <input type="file" id="csv-file" accept=".csv" />
