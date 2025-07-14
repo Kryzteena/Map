@@ -5,8 +5,6 @@ document.addEventListener('DOMContentLoaded', () => {
     attribution: '&copy; OpenStreetMap contributors'
   }).addTo(map);
 
-  // Just to confirm it's working, add a marker
-  L.marker([13.41, 122.56]).addTo(map).bindPopup("Map Loaded").openPopup();
 
   const markerClusterGroup = L.markerClusterGroup({
     iconCreateFunction: function (cluster) {
